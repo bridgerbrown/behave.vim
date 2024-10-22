@@ -4,7 +4,7 @@ import sys
 import os
 
 def get_step_definition(feature, input):
-    parsed_input = " ".join(input.lstrip().split(" ")[1:]).lstrip()
+    parsed_input = " ".join(input.strip().split(" ")[1:]).lstrip()
     base_path = os.path.dirname(os.path.abspath(feature))
     steps_paths = [os.path.join(base_path, "steps")]
 
